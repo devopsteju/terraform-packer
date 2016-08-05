@@ -1,0 +1,8 @@
+#MacOS X
+*.DS_Store
+
+#Terraform
+*.tfstate*
+*.terraform
+*.tfvars
+credentials.json
