@@ -1,7 +1,7 @@
 #!/bin/bash -e
  
 PROJECT="$(basename `pwd`)"
-BUCKET="tf-status.s3-website-eu-west-1.amazonaws.com"
+BUCKET="tf-status"
  
 init() {
   if [ -d .terraform ]; then
@@ -18,7 +18,7 @@ init() {
     -backend=s3 \
     -backend-config="bucket=${BUCKET}" \
     -backend-config="key=${PROJECT}/terraform.tfstate" \
-    -backend-config="region=us-east-1"
+    -backend-config="region=eu-west-1"
  
 }
  
