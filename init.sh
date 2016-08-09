@@ -1,11 +1,12 @@
 #!/bin/bash -e
  
-PROJECT="$(basename `pwd`)"
-BUCKET="tf-status"
+BUCKET= "tf-status"
+PROJECT="$1"
+REGION="eu-west-1"
  
 init() {
-  if [ -d .terraform ]; then
-    if [ -e .terraform/terraform.tfstate ]; then
+  if [ -d ${PROJECT}/.terraform ]; then
+    if [ -e ${PROJECT}/.terraform/terraform.tfstate ]; then
       echo "Remote state already exist!"
       if [ -z $IGNORE_INIT ]; then
         exit 1
@@ -18,7 +19,7 @@ init() {
     -backend=s3 \
     -backend-config="bucket=${BUCKET}" \
     -backend-config="key=${PROJECT}/terraform.tfstate" \
-    -backend-config="region=eu-west-1"
+    -backend-config="region=${REGION}"
  
 }
  
