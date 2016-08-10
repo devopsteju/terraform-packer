@@ -5,7 +5,6 @@
 resource "aws_security_group" "allow-http" {
   name        = "${var.name}-allow-http"
   description = "Allow HTTP traffic on port 80"
-  vpc_id      = "${var.vpc_id}"
 
   ingress {
     from_port   = 80
@@ -18,7 +17,6 @@ resource "aws_security_group" "allow-http" {
 resource "aws_security_group" "allow-https" {
   name        = "${var.name}-allow-https"
   description = "Allow HTTPS"
-  vpc_id      = "${var.vpc_id}"
 
   ingress {
     from_port   = 443
@@ -31,7 +29,6 @@ resource "aws_security_group" "allow-https" {
 resource "aws_security_group" "allow-icmp" {
   name        = "${var.name}-allow-icmp}"
   description = "Allow icmp"
-  vpc_id      = "${var.vpc_id}"
 
   ingress {
     from_port   = -1
@@ -53,7 +50,6 @@ resource "aws_security_group" "allow-icmp" {
 resource "aws_security_group" "allow-ssh" {
   name        = "${var.name}-allow-ssh"
   description = "Allow ssh"
-  vpc_id      = "${var.vpc_id}"
 
   ingress {
     from_port   = 22
@@ -66,7 +62,6 @@ resource "aws_security_group" "allow-ssh" {
 resource "aws_security_group" "allow-egress" {
   name        = "${var.name}-allow-egress"
   description = "Allow egress"
-  vpc_id      = "${var.vpc_id}"
 
   egress {
     from_port   = 0
