@@ -1,0 +1,16 @@
+# Mandatory variables
+# Credentials
+access_key = ""
+secret_key = ""
+ssh_public_key_name = ""
+ssh_public_key = ""
+
+# Machine types examples
+# machine_type = "t2.nano"
+# machine_type = "c4.large"
+# machine_type = "c4.xlarge"
+# machine_type = "c4.2xlarge"
+# machine_type = "c4.4xlarge"
+# Disk type examples
+# volume_type = "gp2" #SSD
+# volume_type = "st1" #HDD
