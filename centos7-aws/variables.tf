@@ -8,9 +8,9 @@ variable "region" {
   default = "eu-west-1"
 }
 
-variable "access_key" {}
+#variable "access_key" {}
 
-variable "secret_key" {}
+#variable "secret_key" {}
 
 variable "ami" {
   default = "ami-7abd0209"
