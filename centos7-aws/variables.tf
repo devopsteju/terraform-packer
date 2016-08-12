@@ -30,7 +30,7 @@ variable "machine_type" {
 }
 
 variable "volume_type" {
-  default = "st1"
+  default = "standard"
 }
 
 variable "volume_size" {
