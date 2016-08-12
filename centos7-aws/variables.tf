@@ -26,7 +26,7 @@ variable "ssh_public_key_name" {
 }
 
 variable "machine_type" {
-  default = "c4.small"
+  default = "t2.nano"
 }
 
 variable "volume_type" {
