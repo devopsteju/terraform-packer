@@ -1,6 +1,6 @@
 #!/bin/bash -e
  
-BUCKET= "tf-status"
+BUCKET="tf-status"
 PROJECT="$1"
 REGION="eu-west-1"
  
