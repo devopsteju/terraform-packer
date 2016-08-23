@@ -12,5 +12,5 @@ ssh_public_key = ""
 # machine_type = "c4.2xlarge"
 # machine_type = "c4.4xlarge"
 # Disk type examples
-# volume_type = "gp2" #SSD
-# volume_type = "st1" #HDD
+# disk_type = "gp2" #SSD
+# disk_type = "st1" #HDD

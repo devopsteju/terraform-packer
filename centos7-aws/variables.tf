@@ -29,11 +29,11 @@ variable "machine_type" {
   default = "t2.nano"
 }
 
-variable "volume_type" {
+variable "disk_type" {
   default = "standard"
 }
 
-variable "volume_size" {
+variable "disk_size" {
   description = "Disk size in GB"
   default     = "10"
 }
