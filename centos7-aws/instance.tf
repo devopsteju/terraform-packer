@@ -15,8 +15,8 @@ resource "aws_instance" "instance" {
 
   root_block_device = {
     delete_on_termination = true
-    disk_type           = "${var.disk_type}"
-    disk_size           = "${var.disk_size}"
+    volume_type           = "${var.disk_type}"
+    volume_size           = "${var.disk_size}"
   }
 
   tags = {
