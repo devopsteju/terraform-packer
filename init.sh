@@ -1,5 +1,6 @@
 #!/bin/bash -e
- 
+# Set up the remote state configuration for the project.
+
 BUCKET="tf-status"
 PROJECT="$1"
 REGION="eu-west-1"
