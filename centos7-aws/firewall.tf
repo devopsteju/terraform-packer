@@ -27,7 +27,7 @@ resource "aws_security_group" "allow-https" {
 }
 
 resource "aws_security_group" "allow-icmp" {
-  name        = "${var.name}-allow-icmp}"
+  name        = "${var.name}-allow-icmp"
   description = "Allow icmp"
 
   ingress {
