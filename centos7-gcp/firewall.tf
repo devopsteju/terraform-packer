@@ -9,6 +9,7 @@ resource "google_compute_firewall" "allow-http" {
 
   target_tags   = ["http-server"]
   source_ranges = ["0.0.0.0/0"]
+  depends_on = ["google_compute_network.net"]
 }
 
 resource "google_compute_firewall" "allow-https" {
@@ -22,6 +23,7 @@ resource "google_compute_firewall" "allow-https" {
 
   target_tags   = ["https-server"]
   source_ranges = ["0.0.0.0/0"]
+  depends_on    = ["google_compute_network.net"]
 }
 
 resource "google_compute_firewall" "allow-icmp" {
@@ -33,6 +35,7 @@ resource "google_compute_firewall" "allow-icmp" {
   }
 
   source_ranges = ["0.0.0.0/0"]
+  depends_on = ["google_compute_network.net"]
 }
 
 resource "google_compute_firewall" "allow-ssh" {
@@ -45,4 +48,5 @@ resource "google_compute_firewall" "allow-ssh" {
   }
 
   source_ranges = ["0.0.0.0/0"]
+  depends_on = ["google_compute_network.net"]
 }
