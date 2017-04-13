@@ -15,7 +15,6 @@ resource "google_compute_instance" "instance" {
     count       = "${var.instances}"
     clustername = "${var.name}"
     myid        = "${count.index}"
-    network     = "${var.network}"
   }
 
   # network interface
@@ -29,4 +28,6 @@ resource "google_compute_instance" "instance" {
 
   # overwrite the original MTU value on the instance
   metadata_startup_script = "${file("config.sh")}"
+
+  depends_on = ["google_compute_network.net"]
 }
