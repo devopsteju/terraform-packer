@@ -39,13 +39,13 @@ variable "machine_type" {
 
 #### Networking ####
 # The address of the subnet in CIDR
-variable "network" {
-  default = "10.16.0.0/16"
-}
+#variable "network" {
+#  default = "10.16.0.0/16"
+#}
 
-variable "net" {
-  default = "net"
-}
+#variable "net" {
+#  default = "net"
+#}
 
 #### Project ####
 # The name of the cluster
